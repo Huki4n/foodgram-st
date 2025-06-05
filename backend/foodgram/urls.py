@@ -17,11 +17,22 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.urls import get_resolver
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('api.urls', namespace='api')),
+  path('admin/', admin.site.urls),
+  path('api/', include('api.urls', namespace='api')),
 ]
 
+
+def print_urls():
+  resolver = get_resolver()
+  for url_pattern in resolver.url_patterns:
+    print(url_pattern.pattern)
+
+
+# Раскомментируйте следующую строку, чтобы увидеть список URL
+print_urls()
+
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

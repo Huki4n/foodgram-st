@@ -16,7 +16,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-# Create your views here.
 class CustomUserViewSet(djoser_views.UserViewSet):
   """ViewSet для работы с пользователями."""
 

@@ -10,6 +10,7 @@ Django==3.2.16
 django-colorfield==0.7.2
 django-cors-headers==3.13.0
 django-filter==2.4.0
+django-extensions==4.1
 django-templated-mail==1.1.1
 djangorestframework==3.14.0
 djangorestframework-simplejwt==4.8.0

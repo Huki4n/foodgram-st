@@ -41,6 +41,7 @@ INSTALLED_APPS = [
   'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
+  'django_extensions',
   'rest_framework',
   'rest_framework.authtoken',
   'django_filters',
@@ -134,6 +135,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # URL, по которому будут доступны файлы
 MEDIA_URL = '/media/'
 
+JSON_FILE_PATH = os.path.join(BASE_DIR, 'data', 'ingredients.json')
+CSV_FILE_PATH = os.path.join(BASE_DIR, 'data', 'ingredients.csv')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
